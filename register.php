@@ -6,10 +6,13 @@ include "db.php";
         $password = $_POST['password'];
         $role = $_POST['role'];
 
+        //the code to the query
         $sql = "insert into users(name, email, password, role) values('$name', '$email', '$password', '$role')";
 
+        //execute the query
         $result = mysqli_query($conn, $sql);
 
+        //checks if the query was successful
         if(!$result){
             echo "Error!: " . mysqli_error($conn); 
         }else{

@@ -1,7 +1,7 @@
 <?php
 include "db.php";
-echo "Welcome to the dashboard!";
 session_start();
+echo "Welcome to the dashboard!";
 if(isset($_SESSION['user_id'])){
     $user_id = $_SESSION['user_id'];
 } else {

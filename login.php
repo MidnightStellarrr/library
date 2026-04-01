@@ -1,11 +1,13 @@
 <?php
 include "db.php";
+
+//remembers the user login state across pages
 session_start();
 
 $error = ""; // Initialize error variable
 
 if($_SERVER['REQUEST_METHOD'] == "POST"){
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $email = $email = $_POST['email'];
     $password = $_POST['password'];
     
     $sql = "SELECT * FROM users WHERE email = '$email'";

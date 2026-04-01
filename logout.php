@@ -1,4 +1,4 @@
 <?php
 session_start();
-session_destroy();
+session_destroy(); // Destroy the session to log out the user
 ?>
